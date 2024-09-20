@@ -8,9 +8,9 @@ T kvadrat(const T& value) {
 }
 
 
-template<>
-std::vector<double> kvadrat(const std::vector<double>& vector) {
-    std::vector<double> result;
+template<typename T>
+std::vector<T> kvadrat(const std::vector<T>& vector) {
+    std::vector<T> result;
     for (auto v : vector) {
         result.push_back(v * v);
     }
@@ -25,9 +25,9 @@ int main() {
     std::cout << "[OUT]: " << kvadrat(number) << "\n";
 
     std::cout << "[IN]: ";
-    std::vector<double> vec;
+    std::vector<int> vec;
     while (true) {
-        double temp;
+        int temp;
         if (!(std::cin >> temp)) break;
         vec.push_back(temp);
     }
